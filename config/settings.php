@@ -9,7 +9,6 @@ return [
             'template_path' => __DIR__ . '/../templates/',
             'cache_path' => getenv('DEBUG') ? false : __DIR__ . '/../var/cache/',
         ],
-
         // Monolog settings
         'logger' => [
             'name' => 'slim-app',
@@ -26,6 +25,20 @@ return [
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
+        ],
+        'ldap' => [
+          //https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/
+          // An array of your LDAP hosts. You can use either
+          // the host name or the IP address of your host.
+          'hosts'    => ['ldap.forumsys.com'],
+          'port'     => 389,
+          // The base distinguished name of your domain to perform searches upon.
+          'base_dn'  => 'dc=example,dc=com',
+          // The account to use for querying / modifying LDAP records. This
+          // does not need to be an admin account. This can also
+          // be a full distinguished name of the user account.
+          'username' => 'cn=read-only-admin,dc=example,dc=com',
+          'password' => 'password',
         ],
     ],
 ];

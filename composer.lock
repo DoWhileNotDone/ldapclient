@@ -4,8 +4,65 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6fbe70e372d4d5ff453b6df8adaa95e",
+    "content-hash": "003def23ab3f93fd71e4e6c0fabf9fc1",
     "packages": [
+        {
+            "name": "adldap2/adldap2",
+            "version": "v10.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Adldap2/Adldap2.git",
+                "reference": "9e4a41dfd045b6b45b03576e409a99f69dd5dd8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Adldap2/Adldap2/zipball/9e4a41dfd045b6b45b03576e409a99f69dd5dd8e",
+                "reference": "9e4a41dfd045b6b45b03576e409a99f69dd5dd8e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ldap": "*",
+                "illuminate/contracts": "~5.0",
+                "php": ">=7.0",
+                "psr/log": "~1.1",
+                "tightenco/collect": "~5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~6.0"
+            },
+            "suggest": {
+                "ext-fileinfo": "fileinfo is required when retrieving user encoded thumbnails"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Adldap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Bauman",
+                    "email": "steven_bauman@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP LDAP Package for humans.",
+            "keywords": [
+                "active directory",
+                "ad",
+                "adLDAP",
+                "adldap2",
+                "directory",
+                "ldap",
+                "windows"
+            ],
+            "time": "2019-02-20T15:52:32+00:00"
+        },
         {
             "name": "bshaffer/oauth2-server-php",
             "version": "v1.11.1",
@@ -1563,6 +1620,61 @@
             "time": "2018-09-21T13:07:52+00:00"
         },
         {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
             "name": "symfony/translation",
             "version": "v4.2.4",
             "source": {
@@ -1636,6 +1748,82 @@
             "time": "2019-02-27T03:31:50+00:00"
         },
         {
+            "name": "symfony/var-dumper",
+            "version": "v4.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9f87189ac10b42edf7fb8edc846f1937c6d157cf",
+                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2019-02-23T15:17:42+00:00"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v4.2.4",
             "source": {
@@ -1693,6 +1881,56 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2019-02-23T15:17:42+00:00"
+        },
+        {
+            "name": "tightenco/collect",
+            "version": "v5.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tightenco/collect.git",
+                "reference": "9e431d3ba84ff02183bbb6da07410d59ef769f9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/9e431d3ba84ff02183bbb6da07410d59ef769f9b",
+                "reference": "9e431d3ba84ff02183bbb6da07410d59ef769f9b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/var-dumper": ">=3.4 <5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "nesbot/carbon": "^1.26.3",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Collect/Support/helpers.php",
+                    "src/Collect/Support/alias.php"
+                ],
+                "psr-4": {
+                    "Tightenco\\Collect\\": "src/Collect"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "Collect - Illuminate Collections as a separate package.",
+            "keywords": [
+                "collection",
+                "laravel"
+            ],
+            "time": "2019-02-26T18:45:33+00:00"
         },
         {
             "name": "tuupola/callable-handler",

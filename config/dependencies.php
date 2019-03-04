@@ -65,3 +65,25 @@ $container['view'] = function ($c) {
 $container['validator'] = function ($container) {
     return new Validator;
 };
+
+# Ldap provider
+$container['ldap_provider'] = function ($c) {
+
+    // Construct new Adldap instance.
+    $ad = new \Adldap\Adldap();
+
+    $config = $c->get('settings')['ldap'];
+
+    // Add a connection provider to Adldap.
+    $ad->addProvider($config);
+
+    try {
+        // If a successful connection is made to your server, the provider will be returned.
+        $provider = $ad->connect();
+    } catch (\Adldap\Auth\BindException $e) {
+        // There was an issue binding / connecting to the server.
+        throw $e;
+    }
+
+    return $provider;
+};

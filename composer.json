@@ -17,6 +17,7 @@
         "sort-packages": true
     },
     "require": {
+        "adldap2/adldap2": "^10.0",
         "bshaffer/oauth2-server-php": "^1.10",
         "illuminate/database": "~5.1",
         "monolog/monolog": "^1.17",
